@@ -7,7 +7,7 @@ enum IceCreamFlavor{
 }
 struct Order{
     size: i32,
-    iceCreamFlavorList:Vec<IceCreamFlavor>,
+    iceCreamFlavorList:IceCreamFlavor,
 }
 
 fn Price(scoop:&Order.size,) -> i32{
@@ -35,7 +35,7 @@ impl Inventory{
     let mut num_vanilla = 0;
     let mut num_choclate = 0;
 
-    for flavor in &self.flavor{
+    for flavor in &self.gallons{
         match flavor{
             IceCreamFlavor::Strawberry => num_strawberry += 1,
             IceCreamFlavor::Chocolate => num_choclate += 1,
@@ -65,6 +65,9 @@ impl Inventory{
  }
 }
 
+struct customOrder{
+    cusOrder: Vec<(Order,price(Order.size))>,
+}
 fn main() {
     let icecreamStore = Inventory{
         gallons:vec![
@@ -75,4 +78,14 @@ fn main() {
             IceCreamFlavor::Vanilla,
         ],
     };
+
+  
+        let customer1 = Some(size::2,icecreamFlavorList::Chocolate);
+        let order1 = store.orderMade(customer1);
+        println!("")
+        
+    
+
+
+
 } 
