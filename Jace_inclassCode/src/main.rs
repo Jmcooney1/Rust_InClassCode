@@ -7,7 +7,7 @@ enum IceCreamFlavor{
 }
 struct Order{
     size: i32,
-    iceCreamFlavorList:IceCreamFlavor,
+    ice_Cream_Flavor_List:IceCreamFlavor,
 }
 
 fn Price(scoop:&Order.size,) -> i32{
@@ -27,7 +27,7 @@ struct Inventory{
 }
 
 impl Inventory{
- fn orderMade(&self,user_preference:Option<Order>,) -> Order {
+ fn order_Made(&self,user_preference:Option<Order>,) -> Order {
     user_preference.unwrap_or_else(|| self.most_stocked())
  }
  fn most_stocked(&self) -> Order{
@@ -66,7 +66,7 @@ impl Inventory{
 }
 
 struct customOrder{
-    cusOrder: Vec<(Order,price(Order.size))>,
+    cusOrder: Vec<(Order,Price(Order.size))>,
 }
 fn main() {
     let icecreamStore = Inventory{
@@ -80,8 +80,8 @@ fn main() {
     };
 
   
-        let customer1 = Some(size::2,icecreamFlavorList::Chocolate);
-        let order1 = store.orderMade(customer1);
+        let customer1 = Some(Order<size::2,ice_Cream_Flavor_List::Chocolate>);
+        let order1 = icecreamStore.order_Made(customer1);
         println!("")
         
     
